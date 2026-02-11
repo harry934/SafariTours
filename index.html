@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harrysa Safari Tours | Experience the Wild Like Never Before</title>
+    <meta name="description" content="Premium safari tours in Kenya and Tanzania. Experience the wild with expert guides and luxury accommodation.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C19A6B',
+                        secondary: '#1B4332',
+                        accent: '#E76F51',
+                        sand: '#F9F7F2',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-sand text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent" id="navbar">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="text-2xl font-serif font-bold text-white flex items-center gap-2 z-50 relative">
+                <i class="fas fa-paw text-primary"></i> <span class="text-secondary dark:text-white">Harrysa</span><span class="text-primary">Tours</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-white hover:text-primary transition-colors font-medium">Home</a>
+                <a href="tours.html" class="text-white hover:text-primary transition-colors font-medium">Tours</a>
+                <a href="destinations.html" class="text-white hover:text-primary transition-colors font-medium">Destinations</a>
+                <a href="about.html" class="text-white hover:text-primary transition-colors font-medium">About</a>
+                <a href="blog.html" class="text-white hover:text-primary transition-colors font-medium">Blog</a>
+                <a href="contact.html" class="px-6 py-2 bg-primary text-white rounded-full hover:bg-secondary transition-all transform hover:scale-105 shadow-lg">Contact Us</a>
+                
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden z-50 text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars menu-open-icon"></i>
+                <i class="fas fa-times menu-close-icon hidden"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden backdrop-blur-sm"></div>
+        
+        <!-- Mobile Menu Sidebar -->
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white dark:bg-gray-800 z-40 transform translate-x-full transition-transform duration-300 shadow-2xl flex flex-col pt-24 px-8 md:hidden">
+            <a href="index.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">Home</a>
+            <a href="tours.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">Tours</a>
+            <a href="destinations.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">Destinations</a>
+            <a href="about.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">About</a>
+            <a href="blog.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">Blog</a>
+            <a href="contact.html" class="mt-8 px-6 py-3 bg-primary text-white rounded-full text-center font-medium shadow-lg">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80" alt="Safari Landscape" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 text-sm font-medium mb-6 fade-in-up uppercase tracking-widest">Premium Safari Experience</span>
+            
+            <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight fade-in-up" style="animation-delay: 0.1s;">
+                Experience the Wild <br/> <span class="text-primary italic">Like Never Before</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.2s;">
+                Embark on an unforgettable journey through the heart of Africa. Witness nature's majesty with our expert-guided luxury tours.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center fade-in-up" style="animation-delay: 0.3s;">
+                <a href="tours.html" class="px-8 py-4 bg-primary text-white rounded-full font-medium text-lg hover:bg-secondary transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl min-w-[180px]">
+                    Book Now
+                </a>
+                <a href="destinations.html" class="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-medium text-lg hover:bg-white hover:text-secondary transition-all min-w-[180px]">
+                    Explore Destinations
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </header>
+
+    <!-- Featured Tours Section -->
+    <section class="py-20 md:py-28 bg-sand dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="text-primary font-medium tracking-wider uppercase">Unforgettable Journeys</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-secondary dark:text-white mt-3">Featured Tours</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tour Card 1 -->
+                <div class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 fade-in-up">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Maasai Mara" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-secondary dark:text-primary shadow-sm">
+                            <i class="fas fa-clock mr-1"></i> 3 Days
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold font-serif text-gray-900 dark:text-white group-hover:text-primary transition-colors">Maasai Mara Safari</h3>
+                            <div class="flex text-yellow-500 text-sm">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">Experience the Great Migration and the Big 5 in Kenya's most famous reserve.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">From</span>
+                                <span class="text-2xl font-bold text-primary block">$450</span>
+                            </div>
+                            <a href="tours.html" class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Card 2 -->
+                <div class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Amboseli" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-secondary dark:text-primary shadow-sm">
+                            <i class="fas fa-clock mr-1"></i> 2 Days
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold font-serif text-gray-900 dark:text-white group-hover:text-primary transition-colors">Amboseli Adventure</h3>
+                            <div class="flex text-yellow-500 text-sm">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">Witness immense elephant herds against the backdrop of Mount Kilimanjaro.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">From</span>
+                                <span class="text-2xl font-bold text-primary block">$320</span>
+                            </div>
+                            <a href="tours.html" class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Card 3 -->
+                <div class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tsavo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-secondary dark:text-primary shadow-sm">
+                            <i class="fas fa-clock mr-1"></i> 4 Days
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold font-serif text-gray-900 dark:text-white group-hover:text-primary transition-colors">Tsavo Wilderness</h3>
+                            <div class="flex text-yellow-500 text-sm">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">Explore the vast red landscapes and man-eater lions of Tsavo National Park.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">From</span>
+                                <span class="text-2xl font-bold text-primary block">$550</span>
+                            </div>
+                            <a href="tours.html" class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 fade-in-up">
+                <a href="tours.html" class="inline-flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors text-lg">
+                    View All Tours <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 md:py-28 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in-up">
+                    <span class="text-primary font-bold tracking-wider uppercase">Why Choose Us</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-secondary dark:text-white mt-4 mb-6">We Make Your Safari Dreams Reality</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed">
+                        With over 10 years of experience, we specialize in crafting personalized safari adventures that are safe, sustainable, and spectacular.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                <i class="fas fa-certificate text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Expert Guides</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Our guides are certified experts with deep knowledge of wildlife and ecosystems.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                <i class="fas fa-shield-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Safety First</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Your safety is our priority. We use well-maintained vehicles and follow strict safety protocols.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                <i class="fas fa-headset text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">24/7 Support</h4>
+                                <p class="text-gray-600 dark:text-gray-400">From booking to the end of your trip, our team is available around the clock to assist you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-sand dark:bg-gray-700 rounded-full z-0"></div>
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/20 rounded-full z-0"></div>
+                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Safari Guide" class="relative z-10 rounded-2xl shadow-2xl w-full object-cover h-[500px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="py-20 md:py-28 bg-sand dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="text-primary font-medium tracking-wider uppercase">Explore Places</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-secondary dark:text-white mt-3">Popular Destinations</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Destination 1 -->
+                <a href="destinations.html" class="group relative overflow-hidden rounded-2xl h-80 destination-card shadow-lg fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Maasai Mara" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 overlay flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-1 group-hover:text-primary transition-colors">Maasai Mara</h3>
+                        <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Kenya's most famous wildlife reserve</p>
+                    </div>
+                </a>
+
+                <!-- Destination 2 -->
+                <a href="destinations.html" class="group relative overflow-hidden rounded-2xl h-80 destination-card shadow-lg fade-in-up" style="animation-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Amboseli" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 overlay flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-1 group-hover:text-primary transition-colors">Amboseli</h3>
+                        <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Home of the African Elephants</p>
+                    </div>
+                </a>
+
+                <!-- Destination 3 -->
+                <a href="destinations.html" class="group relative overflow-hidden rounded-2xl h-80 destination-card shadow-lg fade-in-up" style="animation-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tsavo" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 overlay flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-1 group-hover:text-primary transition-colors">Tsavo</h3>
+                        <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Red elephants and vast landscapes</p>
+                    </div>
+                </a>
+
+                <!-- Destination 4 -->
+                <a href="destinations.html" class="group relative overflow-hidden rounded-2xl h-80 destination-card shadow-lg fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1634547432607-2856f6636746?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Samburu" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 overlay flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-1 group-hover:text-primary transition-colors">Samburu</h3>
+                        <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Unique wildlife of northern Kenya</p>
+                    </div>
+                </a>
+
+                <!-- Destination 5 -->
+                <a href="destinations.html" class="group relative overflow-hidden rounded-2xl h-80 destination-card shadow-lg fade-in-up" style="animation-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1605649487215-2f5f7253457a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lake Nakuru" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 overlay flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-1 group-hover:text-primary transition-colors">Lake Nakuru</h3>
+                        <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Flamingos and rhinos sanctuary</p>
+                    </div>
+                </a>
+
+                <!-- Destination 6 -->
+                <a href="destinations.html" class="group relative overflow-hidden rounded-2xl h-80 destination-card shadow-lg fade-in-up" style="animation-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Diani Beach" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 overlay flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-1 group-hover:text-primary transition-colors">Diani Beach</h3>
+                        <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Award-winning white sand beaches</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-20 bg-secondary overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Background" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 fade-in-up">Ready for the Adventure of a Lifetime?</h2>
+            <p class="text-xl text-gray-200 mb-10 max-w-2xl mx-auto fade-in-up">Book your safari tour today and immerse yourself in the beauty of the African wilderness.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center fade-in-up">
+                <a href="contact.html" class="px-8 py-4 bg-primary text-white rounded-full font-bold text-lg hover:bg-white hover:text-secondary transition-all transform hover:scale-105 shadow-xl">
+                    Get in Touch
+                </a>
+                <a href="https://wa.me/254700000000" target="_blank" class="px-8 py-4 bg-[#25D366] text-white rounded-full font-bold text-lg hover:bg-white hover:text-[#25D366] transition-all transform hover:scale-105 shadow-xl flex items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="text-2xl font-serif font-bold text-white flex items-center gap-2 mb-6">
+                        <i class="fas fa-paw text-primary"></i> <span>Harrysa</span><span class="text-primary">Tours</span>
+                    </a>
+                    <p class="mb-6 text-sm leading-relaxed">Experience the best of Africa with our premium tours. We create memories that last a lifetime.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-serif font-bold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="tours.html" class="hover:text-primary transition-colors">Our Tours</a></li>
+                        <li><a href="destinations.html" class="hover:text-primary transition-colors">Destinations</a></li>
+                        <li><a href="blog.html" class="hover:text-primary transition-colors">Travel Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tours -->
+                <div>
+                    <h3 class="text-white font-serif font-bold text-lg mb-6">Popular Tours</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="tours.html" class="hover:text-primary transition-colors">3 Days Maasai Mara</a></li>
+                        <li><a href="tours.html" class="hover:text-primary transition-colors">5 Days Amboseli & Tsavo</a></li>
+                        <li><a href="tours.html" class="hover:text-primary transition-colors">7 Days Best of Kenya</a></li>
+                        <li><a href="tours.html" class="hover:text-primary transition-colors">4 Days Samburu</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-white font-serif font-bold text-lg mb-6">Contact Info</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <span>Nairobi, Kenya</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone text-primary"></i>
+                            <span>+254 700 000 000</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span>info@harrysatours.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <p>&copy; 2026 Harrysa Safari Tours. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-secondary hover:-translate-y-1 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Main Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

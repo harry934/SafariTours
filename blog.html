@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog | Harrysa Safari Tours</title>
+    <meta name="description" content="Safari tips, wildlife photography guides, and travel inspiration from Harrysa Tours.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C19A6B',
+                        secondary: '#1B4332',
+                        accent: '#E76F51',
+                        sand: '#F9F7F2',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-sand text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4 top-0 bg-secondary shadow-md" id="navbar">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-white flex items-center gap-2 z-50 relative">
+                <i class="fas fa-paw text-primary"></i> <span class="text-white">Harrysa</span><span class="text-primary">Tours</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-white hover:text-primary transition-colors font-medium">Home</a>
+                <a href="tours.html" class="text-white hover:text-primary transition-colors font-medium">Tours</a>
+                <a href="destinations.html" class="text-white hover:text-primary transition-colors font-medium">Destinations</a>
+                <a href="about.html" class="text-white hover:text-primary transition-colors font-medium">About</a>
+                <a href="blog.html" class="text-primary font-medium">Blog</a>
+                <a href="contact.html" class="px-6 py-2 bg-primary text-white rounded-full hover:bg-white hover:text-secondary transition-all transform hover:scale-105 shadow-lg">Contact Us</a>
+                <button id="theme-toggle" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden z-50 text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars menu-open-icon"></i>
+                <i class="fas fa-times menu-close-icon hidden"></i>
+            </button>
+        </div>
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden backdrop-blur-sm"></div>
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white dark:bg-gray-800 z-40 transform translate-x-full transition-transform duration-300 shadow-2xl flex flex-col pt-24 px-8 md:hidden">
+            <a href="index.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">Home</a>
+            <a href="tours.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">Tours</a>
+             <a href="blog.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 text-primary">Blog</a>
+            <a href="contact.html" class="mt-8 px-6 py-3 bg-primary text-white rounded-full text-center font-medium shadow-lg">Contact Us</a>
+        </div>
+    </nav>
+    <div class="h-24"></div>
+
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-secondary dark:text-white mb-6">Safari Journal</h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Tips, stories, and guides from the heart of the wild.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <article class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Full Blog Post" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-secondary">Wildlife</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                            <i class="far fa-calendar-alt"></i> Jan 24, 2026
+                            <span class="mx-1">•</span>
+                            <span>By James K.</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-secondary dark:text-white mb-3 hover:text-primary transition-colors cursor-pointer">The Great Migration: A Complete Guide</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">Everything you need to know about witnessing one of nature's greatest spectacles in the Maasai Mara...</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">Read More <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Camel" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-secondary">Photography</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                            <i class="far fa-calendar-alt"></i> Jan 18, 2026
+                            <span class="mx-1">•</span>
+                            <span>By Sarah M.</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-secondary dark:text-white mb-3 hover:text-primary transition-colors cursor-pointer">Top 5 Safari Photography Tips</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">How to capture stunning wildlife shots without being a professional. Lighting, composition, and patience...</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">Read More <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Packing" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-secondary">Travel Tips</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                            <i class="far fa-calendar-alt"></i> Jan 10, 2026
+                            <span class="mx-1">•</span>
+                            <span>By David O.</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-secondary dark:text-white mb-3 hover:text-primary transition-colors cursor-pointer">What to Pack for Your Safari</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">The essential packing list for comfort and style in the bush. Don't forget these crucial items...</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">Read More <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-12 flex justify-center gap-2">
+                <button class="w-10 h-10 rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white transition-colors flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+                <button class="w-10 h-10 rounded-full bg-primary text-white font-medium flex items-center justify-center">1</button>
+                <button class="w-10 h-10 rounded-full border border-gray-300 text-gray-700 hover:bg-primary hover:text-white transition-colors flex items-center justify-center">2</button>
+                <button class="w-10 h-10 rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white transition-colors flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-16 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                 <div>
+                    <a href="index.html" class="text-2xl font-serif font-bold text-white flex items-center gap-2 mb-6">
+                        <i class="fas fa-paw text-primary"></i> <span>Harrysa</span><span class="text-primary">Tours</span>
+                    </a>
+                </div>
+                <!-- Links simplified -->
+                <div>
+                     <h3 class="text-white font-serif font-bold text-lg mb-6">Quick Links</h3>
+                     <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="blog.html" class="hover:text-primary transition-colors">Blog</a></li>
+                     </ul>
+                </div>
+            </div>
+             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm">
+                <p>&copy; 2026 Harrysa Safari Tours. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-secondary hover:-translate-y-1 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
