@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Harrysa Safari Tours</title>
     <meta name="description" content="Learn about our story, our team of expert guides, and our commitment to sustainable tourism in East Africa.">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -15,7 +17,7 @@
                         primary: '#C19A6B',
                         secondary: '#1B4332',
                         accent: '#E76F51',
-                        sand: '#F9F7F2',
+                        sand: '#F8F5F0',
                     },
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
@@ -25,44 +27,58 @@
             }
         }
     </script>
+    
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-sand text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 transition-all duration-300 py-4 top-0 bg-secondary shadow-md" id="navbar">
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4 top-0 bg-white/95 dark:bg-gray-900/95 shadow-md" id="navbar">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-serif font-bold text-white flex items-center gap-2 z-50 relative">
-                <i class="fas fa-paw text-primary"></i> <span class="text-white">Harrysa</span><span class="text-primary">Tours</span>
+            <!-- Logo -->
+            <a href="index.html" class="text-2xl font-serif font-bold text-secondary dark:text-white flex items-center gap-2 z-50 relative">
+                <i data-lucide="footprint" class="text-primary fill-current"></i> <span class="text-secondary dark:text-white">Harrysa</span><span class="text-primary">Tours</span>
             </a>
+
+            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8">
-                <a href="index.html" class="text-white hover:text-primary transition-colors font-medium">Home</a>
-                <a href="tours.html" class="text-white hover:text-primary transition-colors font-medium">Tours</a>
-                <a href="destinations.html" class="text-white hover:text-primary transition-colors font-medium">Destinations</a>
-                <a href="about.html" class="text-primary font-medium">About</a>
-                <a href="blog.html" class="text-white hover:text-primary transition-colors font-medium">Blog</a>
-                <a href="contact.html" class="px-6 py-2 bg-primary text-white rounded-full hover:bg-white hover:text-secondary transition-all transform hover:scale-105 shadow-lg">Contact Us</a>
-                <button id="theme-toggle" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">
-                    <i class="fas fa-moon dark:hidden"></i>
-                    <i class="fas fa-sun hidden dark:block"></i>
+                <a href="index.html" class="nav-link text-secondary dark:text-white hover:text-primary transition-colors font-medium">Home</a>
+                <a href="tours.html" class="nav-link text-secondary dark:text-white hover:text-primary transition-colors font-medium">Tours</a>
+                <a href="destinations.html" class="nav-link text-secondary dark:text-white hover:text-primary transition-colors font-medium">Destinations</a>
+                <a href="about.html" class="nav-link text-primary font-medium">About</a>
+                <a href="contact.html" class="px-6 py-2 bg-primary text-white rounded-full hover:bg-secondary transition-all transform hover:scale-105 shadow-lg">Contact Us</a>
+                
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-full bg-secondary/10 dark:bg-white/10 hover:bg-secondary/20 dark:hover:bg-white/20 text-secondary dark:text-white transition-colors">
+                    <i data-lucide="moon" class="dark:hidden w-5 h-5"></i>
+                    <i data-lucide="sun" class="hidden dark:block w-5 h-5"></i>
                 </button>
             </div>
-            <button id="mobile-menu-btn" class="md:hidden z-50 text-white text-2xl focus:outline-none">
-                <i class="fas fa-bars menu-open-icon"></i>
-                <i class="fas fa-times menu-close-icon hidden"></i>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden z-50 text-secondary dark:text-white text-2xl focus:outline-none">
+                <i data-lucide="menu" class="menu-open-icon"></i>
+                <i data-lucide="x" class="menu-close-icon hidden"></i>
             </button>
         </div>
+
+        <!-- Mobile Menu Overlay -->
         <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden backdrop-blur-sm"></div>
+        
+        <!-- Mobile Menu Sidebar -->
         <div id="mobile-menu" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white dark:bg-gray-800 z-40 transform translate-x-full transition-transform duration-300 shadow-2xl flex flex-col pt-24 px-8 md:hidden">
-            <a href="index.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">Home</a>
-            <a href="tours.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">Tours</a>
-            <a href="destinations.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">Destinations</a>
+            <a href="index.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary text-gray-800 dark:text-gray-100">Home</a>
+            <a href="tours.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary text-gray-800 dark:text-gray-100">Tours</a>
+            <a href="destinations.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary text-gray-800 dark:text-gray-100">Destinations</a>
             <a href="about.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 text-primary">About</a>
-            <a href="blog.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">Blog</a>
             <a href="contact.html" class="mt-8 px-6 py-3 bg-primary text-white rounded-full text-center font-medium shadow-lg">Contact Us</a>
         </div>
     </nav>
+
     <div class="h-24"></div>
 
     <!-- About Content -->
@@ -85,17 +101,23 @@
             <!-- Mission/Vision -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
                 <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border-t-4 border-primary fade-in-up">
-                    <i class="fas fa-bullseye text-4xl text-primary mb-4"></i>
+                    <div class="text-primary mb-4">
+                        <i data-lucide="target" class="w-10 h-10"></i>
+                    </div>
                     <h3 class="text-2xl font-serif font-bold text-secondary dark:text-white mb-4">Our Mission</h3>
                     <p class="text-gray-600 dark:text-gray-400">To provide unforgettable, eco-conscious wildlife experiences that inspire a deep appreciation for nature.</p>
                 </div>
                 <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border-t-4 border-secondary fade-in-up" style="animation-delay: 0.1s;">
-                    <i class="fas fa-eye text-4xl text-secondary mb-4"></i>
+                     <div class="text-secondary mb-4">
+                        <i data-lucide="eye" class="w-10 h-10"></i>
+                    </div>
                     <h3 class="text-2xl font-serif font-bold text-secondary dark:text-white mb-4">Our Vision</h3>
                     <p class="text-gray-600 dark:text-gray-400">To be the leading sustainable safari operator in East Africa, setting the standard for conservation-focused tourism.</p>
                 </div>
                 <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border-t-4 border-accent fade-in-up" style="animation-delay: 0.2s;">
-                    <i class="fas fa-heart text-4xl text-accent mb-4"></i>
+                     <div class="text-accent mb-4">
+                        <i data-lucide="heart" class="w-10 h-10"></i>
+                    </div>
                     <h3 class="text-2xl font-serif font-bold text-secondary dark:text-white mb-4">Our Values</h3>
                     <p class="text-gray-600 dark:text-gray-400">Integrity, Safety, Conservation, and Excellence in every service we provide to our guests.</p>
                 </div>
@@ -141,9 +163,9 @@
                     <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Commitment to Sustainability</h2>
                     <p class="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">We believe in tourism that gives back. A portion of every booking goes towards local wildlife conservation projects and community empowerment initiatives.</p>
                     <div class="flex justify-center gap-8 text-4xl">
-                        <i class="fas fa-leaf text-green-400" title="Eco-Friendly"></i>
-                        <i class="fas fa-paw text-primary" title="Wildlife Protection"></i>
-                        <i class="fas fa-hands-helping text-blue-400" title="Community Support"></i>
+                        <i data-lucide="leaf" class="text-green-400 w-10 h-10" title="Eco-Friendly"></i>
+                        <i data-lucide="paw-print" class="text-primary w-10 h-10" title="Wildlife Protection"></i>
+                        <i data-lucide="users" class="text-blue-400 w-10 h-10" title="Community Support"></i>
                     </div>
                 </div>
             </div>
@@ -156,7 +178,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 <div>
                     <a href="index.html" class="text-2xl font-serif font-bold text-white flex items-center gap-2 mb-6">
-                        <i class="fas fa-paw text-primary"></i> <span>Harrysa</span><span class="text-primary">Tours</span>
+                        <i data-lucide="footprint" class="text-primary fill-current"></i> <span>Harrysa</span><span class="text-primary">Tours</span>
                     </a>
                     <p class="mb-6 text-sm leading-relaxed">Experience the best of Africa with our premium tours.</p>
                 </div>
@@ -174,7 +196,7 @@
                     <h3 class="text-white font-serif font-bold text-lg mb-6">Contact</h3>
                      <ul class="space-y-4 text-sm">
                         <li class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <i data-lucide="map-pin" class="text-primary mt-1 min-w-[1rem] w-4 h-4"></i>
                             <span>Nairobi, Kenya</span>
                         </li>
                     </ul>
@@ -187,8 +209,40 @@
     </footer>
 
     <button id="scroll-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-secondary hover:-translate-y-1 z-50">
-        <i class="fas fa-arrow-up"></i>
+        <i data-lucide="arrow-up"></i>
     </button>
+    
+    <!-- AI Assistant -->
+    <button id="ai-assistant-btn" class="ai-assistant-btn text-white z-50 transform hover:scale-110 transition-transform">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </button>
+    
+    <div id="chat-panel" class="chat-panel">
+        <div class="chat-header">
+            <div class="flex items-center gap-2">
+                <i data-lucide="bot" class="w-6 h-6"></i>
+                <span class="font-bold">Safari Guide AI</span>
+            </div>
+            <button id="close-chat" class="hover:bg-white/10 p-1 rounded transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+             <div class="chat-message ai">
+                Hello! I'm your Safari Assistant. Learn more about our team and mission here!
+            </div>
+        </div>
+        <div class="p-3 bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700">
+             <div class="flex gap-2">
+                <input type="text" placeholder="Type a message..." class="flex-1 px-4 py-2 rounded-full border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary text-sm" disabled>
+                <button class="w-9 h-9 bg-primary text-white rounded-full flex items-center justify-center disabled:opacity-50" disabled>
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>

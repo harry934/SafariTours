@@ -1,35 +1,54 @@
 /* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap");
 
 /* Tailwind Directives are handled via CDN, these are custom overrides/additions */
 
 :root {
-  --color-primary: #C19A6B;
-  --color-secondary: #1B4332;
-  --color-accent: #E76F51;
-  --color-bg: #F9F7F2;    /* Sand/Off-white */
-  --color-text: #333333;
+  --color-primary: #c19a6b; /* Safari Gold */
+  --color-secondary: #1b4332; /* Deep Green */
+  --color-accent: #e76f51;
+  --color-bg: #f8f5f0; /* Soft Sand / Off-white */
+  --color-text: #222222; /* Dark Charcoal */
   --color-paper: #ffffff;
+  --color-border: #e5e7eb;
 }
 
-/* Dark Mode Variables - simplistic approach for vanilla JS toggling */
+/* Dark Mode Variables */
 [data-theme="dark"] {
   --color-bg: #111827;
-  --color-text: #F3F4F6;
-  --color-paper: #1F2937;
-  --color-secondary: #10B981; /* Lighter green for dark mode contrast */
+  --color-text: #f3f4f6;
+  --color-paper: #1f2937;
+  --color-secondary: #10b981; /* Lighter green for dark mode contrast */
+  --color-border: #374151;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  color: var(--color-secondary);
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #f3f4f6;
 }
 
 /* Custom Scrollbar */
@@ -51,12 +70,64 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Utilities */
-.text-gold { color: var(--color-primary); }
-.bg-gold { background-color: var(--color-primary); }
-.text-deep-green { color: var(--color-secondary); }
-.bg-deep-green { background-color: var(--color-secondary); }
-.text-accent { color: var(--color-accent); }
-.bg-accent { background-color: var(--color-accent); }
+.text-gold {
+  color: var(--color-primary);
+}
+.bg-gold {
+  background-color: var(--color-primary);
+}
+.text-deep-green {
+  color: var(--color-secondary);
+}
+.bg-deep-green {
+  background-color: var(--color-secondary);
+}
+.text-accent {
+  color: var(--color-accent);
+}
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+/* Navbar Styles */
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+[data-theme="dark"] .navbar-scrolled {
+  background-color: rgba(17, 24, 39, 0.95);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -1px rgba(0, 0, 0, 0.18);
+}
+
+/* Nav Links */
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
 
 /* Glassmorphism */
 .glass {
@@ -75,7 +146,9 @@ h1, h2, h3, h4, h5, h6 {
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 
 .fade-in-up.visible {
@@ -84,12 +157,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .hover-lift:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 /* Specific Component Styles */
@@ -117,7 +194,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-overlay {
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
 }
 
 /* Mobile Menu */
@@ -135,7 +212,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Destination Card Overlay */
 .destination-card .overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .destination-card:hover img {
@@ -146,14 +227,170 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.7s ease;
 }
 
-/* Smooth Expand */
-.expandable-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+/* Floating AI Assistant */
+.ai-assistant-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--color-primary), #d4af37);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 50;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: pulse-soft 2s infinite;
 }
 
-.expandable-content.expanded {
-  max-height: 2000px; /* Arbitrary large height */
-  transition: max-height 0.8s ease-in-out;
+.ai-assistant-btn:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulse-soft {
+  0% {
+    box-shadow: 0 0 0 0 rgba(193, 154, 107, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(193, 154, 107, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(193, 154, 107, 0);
+  }
+}
+
+.chat-panel {
+  position: fixed;
+  bottom: 6rem;
+  right: 2rem;
+  width: 350px;
+  max-width: calc(100vw - 4rem);
+  height: 500px;
+  max-height: calc(100vh - 8rem);
+  background-color: var(--color-paper);
+  border-radius: 1rem;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--color-border);
+}
+
+.chat-panel.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.chat-header {
+  background: linear-gradient(135deg, var(--color-secondary), #2d6a4f);
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: var(--color-bg);
+}
+
+.chat-message {
+  max-width: 80%;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.chat-message.ai {
+  background-color: white;
+  color: var(--color-text);
+  border-bottom-left-radius: 0.25rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .chat-message.ai {
+  background-color: var(--color-paper);
+}
+
+.chat-message.user {
+  background-color: var(--color-primary);
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.chat-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.chat-option-btn {
+  background-color: white;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+[data-theme="dark"] .chat-option-btn {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chat-option-btn:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.typing-indicator span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #ccc;
+  border-radius: 50%;
+  animation: typing 1.4s infinite ease-in-out both;
+  margin: 0 1px;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+.typing-indicator span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes typing {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
 }

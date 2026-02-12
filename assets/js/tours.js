@@ -1,41 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    initExpandableCards();
     initFilters();
 });
-
-/* --- Expandable Tour Cards --- */
-function initExpandableCards() {
-    const expandButtons = document.querySelectorAll('.expand-btn');
-
-    expandButtons.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.stopPropagation(); // Prevent bubbling if necessary
-            
-            const card = this.closest('.tour-card');
-            const content = card.querySelector('.expandable-content');
-            
-            // Toggle active class on button (optional for styling)
-            this.classList.toggle('active');
-            
-            // Toggle text
-            if (this.classList.contains('active')) {
-                this.textContent = 'Hide Itinerary';
-                this.classList.add('bg-primary', 'text-white');
-                this.classList.remove('text-primary');
-                
-                // Expand
-                content.classList.add('expanded');
-            } else {
-                this.textContent = 'View Itinerary';
-                this.classList.remove('bg-primary', 'text-white');
-                this.classList.add('text-primary');
-                
-                // Collapse
-                content.classList.remove('expanded');
-            }
-        });
-    });
-}
 
 /* --- Filter Logic --- */
 function initFilters() {
@@ -49,30 +14,34 @@ function initFilters() {
     const noResults = document.getElementById('no-results');
 
     // Update Price Label
-    priceRange.addEventListener('input', () => {
-        priceValue.textContent = `$${priceRange.value}`;
-        filterTours();
-    });
+    if (priceRange) {
+        priceRange.addEventListener('input', () => {
+            priceValue.textContent = `$${priceRange.value}`;
+            filterTours();
+        });
+    }
 
     // Listeners for all inputs
-    searchInput.addEventListener('input', filterTours);
-    destinationSelect.addEventListener('change', filterTours);
+    searchInput?.addEventListener('input', filterTours);
+    destinationSelect?.addEventListener('change', filterTours);
     durationCheckboxes.forEach(cb => cb.addEventListener('change', filterTours));
     
     // Reset Filters
-    resetButton.addEventListener('click', () => {
-        searchInput.value = '';
-        destinationSelect.value = 'all';
-        priceRange.value = 5000;
-        priceValue.textContent = '$5000';
+    resetButton?.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        if (destinationSelect) destinationSelect.value = 'all';
+        if (priceRange) {
+            priceRange.value = 5000;
+            priceValue.textContent = '$5000';
+        }
         durationCheckboxes.forEach(cb => cb.checked = false);
         filterTours();
     });
 
     function filterTours() {
-        const searchTerm = searchInput.value.toLowerCase();
-        const selectedDestination = destinationSelect.value;
-        const maxPrice = parseInt(priceRange.value);
+        const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+        const selectedDestination = destinationSelect ? destinationSelect.value : 'all';
+        const maxPrice = priceRange ? parseInt(priceRange.value) : 10000;
         
         // Get selected durations
         const selectedDurations = Array.from(durationCheckboxes)
@@ -117,10 +86,12 @@ function initFilters() {
         });
 
         // Show/Hide "No Results" message
-        if (visibleCount === 0) {
-            noResults.classList.remove('hidden');
-        } else {
-            noResults.classList.add('hidden');
+        if (noResults) {
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
         }
     }
 }

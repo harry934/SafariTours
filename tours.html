@@ -17,7 +17,7 @@
                         primary: '#C19A6B',
                         secondary: '#1B4332',
                         accent: '#E76F51',
-                        sand: '#F9F7F2',
+                        sand: '#F8F5F0',
                     },
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
@@ -32,38 +32,37 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-sand text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-    <!-- Navigation (Copied from index.html for simplicity) -->
-    <nav class="fixed w-full z-50 transition-all duration-300 py-4 top-0 bg-secondary shadow-md" id="navbar">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4 top-0 bg-white/95 dark:bg-gray-900/95 shadow-md" id="navbar">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <!-- Logo -->
-            <a href="index.html" class="text-2xl font-serif font-bold text-white flex items-center gap-2 z-50 relative">
-                <i class="fas fa-paw text-primary"></i> <span class="text-white">Harrysa</span><span class="text-primary">Tours</span>
+            <a href="index.html" class="text-2xl font-serif font-bold text-secondary dark:text-white flex items-center gap-2 z-50 relative">
+                <i data-lucide="footprint" class="text-primary fill-current"></i> <span class="text-secondary dark:text-white">Harrysa</span><span class="text-primary">Tours</span>
             </a>
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8">
-                <a href="index.html" class="text-white hover:text-primary transition-colors font-medium">Home</a>
-                <a href="tours.html" class="text-primary font-medium">Tours</a>
-                <a href="destinations.html" class="text-white hover:text-primary transition-colors font-medium">Destinations</a>
-                <a href="about.html" class="text-white hover:text-primary transition-colors font-medium">About</a>
-                <a href="blog.html" class="text-white hover:text-primary transition-colors font-medium">Blog</a>
-                <a href="contact.html" class="px-6 py-2 bg-primary text-white rounded-full hover:bg-white hover:text-secondary transition-all transform hover:scale-105 shadow-lg">Contact Us</a>
+                <a href="index.html" class="nav-link text-secondary dark:text-white hover:text-primary transition-colors font-medium">Home</a>
+                <a href="tours.html" class="nav-link text-primary font-medium">Tours</a>
+                <a href="destinations.html" class="nav-link text-secondary dark:text-white hover:text-primary transition-colors font-medium">Destinations</a>
+                <a href="about.html" class="nav-link text-secondary dark:text-white hover:text-primary transition-colors font-medium">About</a>
+                <a href="contact.html" class="px-6 py-2 bg-primary text-white rounded-full hover:bg-secondary transition-all transform hover:scale-105 shadow-lg">Contact Us</a>
                 
                 <!-- Dark Mode Toggle -->
-                <button id="theme-toggle" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">
-                    <i class="fas fa-moon dark:hidden"></i>
-                    <i class="fas fa-sun hidden dark:block"></i>
+                <button id="theme-toggle" class="p-2 rounded-full bg-secondary/10 dark:bg-white/10 hover:bg-secondary/20 dark:hover:bg-white/20 text-secondary dark:text-white transition-colors">
+                    <i data-lucide="moon" class="dark:hidden w-5 h-5"></i>
+                    <i data-lucide="sun" class="hidden dark:block w-5 h-5"></i>
                 </button>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden z-50 text-white text-2xl focus:outline-none">
-                <i class="fas fa-bars menu-open-icon"></i>
-                <i class="fas fa-times menu-close-icon hidden"></i>
+            <button id="mobile-menu-btn" class="md:hidden z-50 text-secondary dark:text-white text-2xl focus:outline-none">
+                <i data-lucide="menu" class="menu-open-icon"></i>
+                <i data-lucide="x" class="menu-close-icon hidden"></i>
             </button>
         </div>
 
@@ -72,11 +71,10 @@
         
         <!-- Mobile Menu Sidebar -->
         <div id="mobile-menu" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white dark:bg-gray-800 z-40 transform translate-x-full transition-transform duration-300 shadow-2xl flex flex-col pt-24 px-8 md:hidden">
-            <a href="index.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">Home</a>
+            <a href="index.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary text-gray-800 dark:text-gray-100">Home</a>
             <a href="tours.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 text-primary">Tours</a>
-            <a href="destinations.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">Destinations</a>
-            <a href="about.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">About</a>
-            <a href="blog.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary">Blog</a>
+            <a href="destinations.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary text-gray-800 dark:text-gray-100">Destinations</a>
+            <a href="about.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary text-gray-800 dark:text-gray-100">About</a>
             <a href="contact.html" class="mt-8 px-6 py-3 bg-primary text-white rounded-full text-center font-medium shadow-lg">Contact Us</a>
         </div>
     </nav>
@@ -95,7 +93,7 @@
             <div class="flex flex-col lg:flex-row gap-8">
                 <!-- Sidebar Filters -->
                 <aside class="lg:w-1/4 fade-in-up">
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg sticky top-28">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg sticky top-28 border border-gray-100 dark:border-gray-700">
                         <div class="flex justify-between items-center mb-6">
                             <h3 class="text-xl font-serif font-bold text-secondary dark:text-white">Filters</h3>
                             <button id="reset-filters" class="text-sm text-primary hover:underline">Reset</button>
@@ -105,7 +103,7 @@
                         <div class="mb-6">
                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Search</label>
                             <div class="relative">
-                                <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                                <i data-lucide="search" class="absolute left-3 top-3 text-gray-400 w-5 h-5"></i>
                                 <input type="text" id="search-input" placeholder="Search tours..." class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow">
                             </div>
                         </div>
@@ -158,14 +156,14 @@
                 <main class="lg:w-3/4">
                     <div id="tours-grid" class="space-y-6">
                         <!-- Tour Card 1 -->
-                        <div class="tour-card group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up" 
+                        <div class="tour-card group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up border border-gray-100 dark:border-gray-700" 
                              data-destination="maasai-mara" 
                              data-price="450" 
                              data-duration="3">
                             <div class="flex flex-col md:flex-row h-full">
                                 <div class="md:w-1/3 relative overflow-hidden h-64 md:h-auto">
                                     <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Maasai Mara" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                                    <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Best Seller</div>
+                                    <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-md">Best Seller</div>
                                 </div>
                                 <div class="md:w-2/3 p-6 flex flex-col justify-between">
                                     <div>
@@ -177,71 +175,27 @@
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
-                                            <span><i class="fas fa-clock text-primary mr-1"></i> 3 Days</span>
-                                            <span><i class="fas fa-map-marker-alt text-primary mr-1"></i> Maasai Mara</span>
-                                            <span><i class="fas fa-star text-yellow-500 mr-1"></i> 4.9 (124 reviews)</span>
+                                            <span class="flex items-center gap-1"><i data-lucide="clock" class="text-primary w-4 h-4"></i> 3 Days</span>
+                                            <span class="flex items-center gap-1"><i data-lucide="map-pin" class="text-primary w-4 h-4"></i> Maasai Mara</span>
+                                            <span class="flex items-center gap-1"><i data-lucide="star" class="text-yellow-500 fill-current w-4 h-4"></i> 4.9 (124 reviews)</span>
                                         </div>
-                                        <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">Witness the world-famous Great Wildebeest Migration in the Maasai Mara. This 3-day safari offers exceptional game viewing opportunities including the Big Five.</p>
+                                        <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">Witness the world-famous Great Wildebeest Migration in the Maasai Mara. This 3-day safari offers exceptional game viewing opportunities.</p>
                                     </div>
                                     
                                     <div class="flex gap-4">
-                                        <button class="expand-btn flex-1 py-3 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all text-center">
-                                            View Itinerary
-                                        </button>
-                                        <button onclick="window.location.href='contact.html'" class="flex-1 py-3 bg-secondary text-white rounded-full font-medium hover:bg-green-800 transition-all text-center shadow-md">
+                                        <a href="tour-details.html" class="flex-1 py-3 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all text-center flex items-center justify-center gap-2">
+                                            View Details
+                                        </a>
+                                        <a href="booking.html?tour=maasai-mara" class="flex-1 py-3 bg-secondary text-white rounded-full font-medium hover:bg-primary transition-all text-center shadow-md flex items-center justify-center gap-2">
                                             Book Now
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Expandable Content -->
-                            <div class="expandable-content bg-gray-50 dark:bg-gray-900/50">
-                                <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                                    <div class="grid md:grid-cols-2 gap-8">
-                                        <div>
-                                            <h4 class="text-lg font-bold mb-4 text-secondary dark:text-white">Day-by-Day Itinerary</h4>
-                                            <ul class="space-y-4">
-                                                <li class="relative pl-6 border-l-2 border-primary">
-                                                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary"></div>
-                                                    <span class="text-sm font-bold block text-gray-500">Day 1</span>
-                                                    <p class="text-sm text-gray-600 dark:text-gray-300">Departure from Nairobi, arrival at Maasai Mara, lunch, and afternoon game drive.</p>
-                                                </li>
-                                                <li class="relative pl-6 border-l-2 border-primary">
-                                                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary"></div>
-                                                    <span class="text-sm font-bold block text-gray-500">Day 2</span>
-                                                    <p class="text-sm text-gray-600 dark:text-gray-300">Full day game drive with picnic lunch. Optional balloon safari at sunrise.</p>
-                                                </li>
-                                                <li class="relative pl-6 border-l-2 border-primary">
-                                                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary"></div>
-                                                    <span class="text-sm font-bold block text-gray-500">Day 3</span>
-                                                    <p class="text-sm text-gray-600 dark:text-gray-300">Morning game drive, breakfast, and drive back to Nairobi.</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-lg font-bold mb-4 text-secondary dark:text-white">What's Included</h4>
-                                            <ul class="space-y-2 mb-6">
-                                                <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300"><i class="fas fa-check text-green-500"></i> Park Entrance Fees</li>
-                                                <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300"><i class="fas fa-check text-green-500"></i> Full Board Accommodation</li>
-                                                <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300"><i class="fas fa-check text-green-500"></i> Professional Guide</li>
-                                                <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300"><i class="fas fa-check text-green-500"></i> Transport in 4x4 Cruiser</li>
-                                            </ul>
-                                            
-                                            <h4 class="text-lg font-bold mb-4 text-secondary dark:text-white">Gallery</h4>
-                                            <div class="grid grid-cols-3 gap-2">
-                                                <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="rounded-lg h-16 w-full object-cover">
-                                                <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="rounded-lg h-16 w-full object-cover">
-                                                <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="rounded-lg h-16 w-full object-cover">
-                                            </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Tour Card 2 -->
-                        <div class="tour-card group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up" 
+                        <div class="tour-card group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up border border-gray-100 dark:border-gray-700" 
                              data-destination="amboseli" 
                              data-price="320" 
                              data-duration="2"
@@ -260,33 +214,27 @@
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
-                                            <span><i class="fas fa-clock text-primary mr-1"></i> 2 Days</span>
-                                            <span><i class="fas fa-map-marker-alt text-primary mr-1"></i> Amboseli</span>
-                                            <span><i class="fas fa-star text-yellow-500 mr-1"></i> 4.8 (85 reviews)</span>
+                                            <span class="flex items-center gap-1"><i data-lucide="clock" class="text-primary w-4 h-4"></i> 2 Days</span>
+                                            <span class="flex items-center gap-1"><i data-lucide="map-pin" class="text-primary w-4 h-4"></i> Amboseli</span>
+                                            <span class="flex items-center gap-1"><i data-lucide="star" class="text-yellow-500 fill-current w-4 h-4"></i> 4.8 (85 reviews)</span>
                                         </div>
                                         <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">A quick but intense safari adventure to the home of magnificent elephants, set against the backdrop of Mount Kilimanjaro.</p>
                                     </div>
                                     
                                     <div class="flex gap-4">
-                                        <button class="expand-btn flex-1 py-3 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all text-center">
-                                            View Itinerary
-                                        </button>
-                                        <button onclick="window.location.href='contact.html'" class="flex-1 py-3 bg-secondary text-white rounded-full font-medium hover:bg-green-800 transition-all text-center shadow-md">
+                                        <a href="tour-details.html" class="flex-1 py-3 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all text-center flex items-center justify-center gap-2">
+                                            View Details
+                                        </a>
+                                        <a href="booking.html?tour=amboseli" class="flex-1 py-3 bg-secondary text-white rounded-full font-medium hover:bg-primary transition-all text-center shadow-md flex items-center justify-center gap-2">
                                             Book Now
-                                        </button>
+                                        </a>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- Expandable Content Logic duplicated in JS usually, but here hardcoded for frontend demo completeness -->
-                            <div class="expandable-content bg-gray-50 dark:bg-gray-900/50">
-                                <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                                    <p class="text-center text-gray-500">Detailed itinerary content loaded here...</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Tour Card 3 -->
-                        <div class="tour-card group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up" 
+                        <div class="tour-card group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up border border-gray-100 dark:border-gray-700" 
                              data-destination="tsavo" 
                              data-price="550" 
                              data-duration="4"
@@ -305,36 +253,31 @@
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
-                                            <span><i class="fas fa-clock text-primary mr-1"></i> 4 Days</span>
-                                            <span><i class="fas fa-map-marker-alt text-primary mr-1"></i> Tsavo</span>
-                                            <span><i class="fas fa-star text-yellow-500 mr-1"></i> 4.7 (92 reviews)</span>
+                                            <span class="flex items-center gap-1"><i data-lucide="clock" class="text-primary w-4 h-4"></i> 4 Days</span>
+                                            <span class="flex items-center gap-1"><i data-lucide="map-pin" class="text-primary w-4 h-4"></i> Tsavo</span>
+                                            <span class="flex items-center gap-1"><i data-lucide="star" class="text-yellow-500 fill-current w-4 h-4"></i> 4.7 (92 reviews)</span>
                                         </div>
                                         <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">Deep dive into Kenya's largest national parks. See the red elephants, Mzima Springs, and the Shetani Lava Flow.</p>
                                     </div>
                                     
                                     <div class="flex gap-4">
-                                        <button class="expand-btn flex-1 py-3 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all text-center">
-                                            View Itinerary
-                                        </button>
-                                        <button onclick="window.location.href='contact.html'" class="flex-1 py-3 bg-secondary text-white rounded-full font-medium hover:bg-green-800 transition-all text-center shadow-md">
+                                        <a href="tour-details.html" class="flex-1 py-3 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all text-center flex items-center justify-center gap-2">
+                                            View Details
+                                        </a>
+                                        <a href="booking.html?tour=tsavo" class="flex-1 py-3 bg-secondary text-white rounded-full font-medium hover:bg-primary transition-all text-center shadow-md flex items-center justify-center gap-2">
                                             Book Now
-                                        </button>
+                                        </a>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="expandable-content bg-gray-50 dark:bg-gray-900/50">
-                                <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                                    <p class="text-center text-gray-500">Detailed itinerary content loaded here...</p>
                                 </div>
                             </div>
                         </div>
 
-                         <!-- Tour Card 4 -->
-                         <div class="tour-card group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up" 
-                         data-destination="nakuru" 
-                         data-price="400" 
-                         data-duration="3"
-                         style="animation-delay: 0.3s;">
+                          <!-- Tour Card 4 -->
+                          <div class="tour-card group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up border border-gray-100 dark:border-gray-700" 
+                          data-destination="nakuru" 
+                          data-price="400" 
+                          data-duration="3"
+                          style="animation-delay: 0.3s;">
                         <div class="flex flex-col md:flex-row h-full">
                             <div class="md:w-1/3 relative overflow-hidden h-64 md:h-auto">
                                 <img src="https://images.unsplash.com/photo-1605649487215-2f5f7253457a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lake Nakuru" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
@@ -349,26 +292,21 @@
                                         </div>
                                     </div>
                                     <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
-                                        <span><i class="fas fa-clock text-primary mr-1"></i> 3 Days</span>
-                                        <span><i class="fas fa-map-marker-alt text-primary mr-1"></i> Lake Nakuru</span>
-                                        <span><i class="fas fa-star text-yellow-500 mr-1"></i> 4.9 (64 reviews)</span>
+                                        <span class="flex items-center gap-1"><i data-lucide="clock" class="text-primary w-4 h-4"></i> 3 Days</span>
+                                        <span class="flex items-center gap-1"><i data-lucide="map-pin" class="text-primary w-4 h-4"></i> Lake Nakuru</span>
+                                        <span class="flex items-center gap-1"><i data-lucide="star" class="text-yellow-500 fill-current w-4 h-4"></i> 4.9 (64 reviews)</span>
                                     </div>
                                     <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">A paradise for bird lovers and rhino tracking. Visit the famous alkaline lake and sanctuary.</p>
                                 </div>
                                 
                                 <div class="flex gap-4">
-                                    <button class="expand-btn flex-1 py-3 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all text-center">
-                                        View Itinerary
-                                    </button>
-                                    <button onclick="window.location.href='contact.html'" class="flex-1 py-3 bg-secondary text-white rounded-full font-medium hover:bg-green-800 transition-all text-center shadow-md">
+                                    <a href="tour-details.html" class="flex-1 py-3 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all text-center flex items-center justify-center gap-2">
+                                        View Details
+                                    </a>
+                                    <a href="booking.html?tour=nakuru" class="flex-1 py-3 bg-secondary text-white rounded-full font-medium hover:bg-primary transition-all text-center shadow-md flex items-center justify-center gap-2">
                                         Book Now
-                                    </button>
+                                    </a>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="expandable-content bg-gray-50 dark:bg-gray-900/50">
-                            <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                                <p class="text-center text-gray-500">Detailed itinerary content loaded here...</p>
                             </div>
                         </div>
                     </div>
@@ -376,7 +314,7 @@
 
                     <!-- No Results Message -->
                     <div id="no-results" class="hidden text-center py-12">
-                        <i class="fas fa-search text-gray-300 text-6xl mb-4"></i>
+                        <i data-lucide="search-x" class="text-gray-300 w-16 h-16 mx-auto mb-4"></i>
                         <h3 class="text-2xl font-serif font-bold text-gray-600 dark:text-gray-400">No tours found</h3>
                         <p class="text-gray-500 mt-2">Try adjusting your filters to find what you're looking for.</p>
                     </div>
@@ -385,14 +323,14 @@
         </div>
     </section>
 
-    <!-- Footer (Copied from index.html) -->
+    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-16 border-t border-gray-800">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 <!-- Brand -->
                 <div>
                     <a href="index.html" class="text-2xl font-serif font-bold text-white flex items-center gap-2 mb-6">
-                        <i class="fas fa-paw text-primary"></i> <span>Harrysa</span><span class="text-primary">Tours</span>
+                        <i data-lucide="footprint" class="text-primary fill-current"></i> <span>Harrysa</span><span class="text-primary">Tours</span>
                     </a>
                     <p class="mb-6 text-sm leading-relaxed">Experience the best of Africa with our premium tours. We create memories that last a lifetime.</p>
                 </div>
@@ -400,17 +338,17 @@
                 <!-- Quick Links -->
                 <div>
                     <h3 class="text-white font-serif font-bold text-lg mb-6">Quick Links</h3>
-                    <ul class="space-y-3 text-sm">
+                     <ul class="space-y-3 text-sm">
                         <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
                         <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
                         <li><a href="tours.html" class="hover:text-primary transition-colors">Our Tours</a></li>
-                        <li><a href="destinations.html" class="hover:text-primary transition-colors">Destinations</a></li>
+                         <li><a href="destinations.html" class="hover:text-primary transition-colors">Destinations</a></li>
                         <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
                     </ul>
                 </div>
 
                 <!-- Tours -->
-                <div>
+                 <div>
                     <h3 class="text-white font-serif font-bold text-lg mb-6">Popular Tours</h3>
                     <ul class="space-y-3 text-sm">
                         <li><a href="tours.html" class="hover:text-primary transition-colors">3 Days Maasai Mara</a></li>
@@ -424,11 +362,11 @@
                     <h3 class="text-white font-serif font-bold text-lg mb-6">Contact Info</h3>
                     <ul class="space-y-4 text-sm">
                         <li class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <i data-lucide="map-pin" class="text-primary mt-1 min-w-[1rem] w-4 h-4"></i>
                             <span>Nairobi, Kenya</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="fas fa-phone text-primary"></i>
+                             <i data-lucide="phone" class="text-primary w-4 h-4"></i>
                             <span>+254 700 000 000</span>
                         </li>
                     </ul>
@@ -447,8 +385,43 @@
 
     <!-- Scroll to Top Button -->
     <button id="scroll-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-secondary hover:-translate-y-1 z-50">
-        <i class="fas fa-arrow-up"></i>
+        <i data-lucide="arrow-up"></i>
     </button>
+    
+    <!-- AI Assistant -->
+    <button id="ai-assistant-btn" class="ai-assistant-btn text-white z-50 transform hover:scale-110 transition-transform">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </button>
+    
+    <div id="chat-panel" class="chat-panel">
+        <div class="chat-header">
+            <div class="flex items-center gap-2">
+                <i data-lucide="bot" class="w-6 h-6"></i>
+                <span class="font-bold">Safari Guide AI</span>
+            </div>
+            <button id="close-chat" class="hover:bg-white/10 p-1 rounded transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+             <div class="chat-message ai">
+                Hello! I'm your Safari Assistant. Looking for a tour recommendation?
+            </div>
+            <div class="chat-options">
+                 <button class="chat-option-btn" data-question="best-safari">Best safari for first-timers?</button>
+                 <button class="chat-option-btn" data-question="budget">Budget options?</button>
+            </div>
+        </div>
+        <div class="p-3 bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700">
+             <div class="flex gap-2">
+                <input type="text" placeholder="Type a message..." class="flex-1 px-4 py-2 rounded-full border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary text-sm" disabled>
+                <button class="w-9 h-9 bg-primary text-white rounded-full flex items-center justify-center disabled:opacity-50" disabled>
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Main Scripts -->
     <script src="assets/js/main.js"></script>

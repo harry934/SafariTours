@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maasai Mara Safari | Harrysa Safari Tours</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C19A6B',
+                        secondary: '#1B4332',
+                        accent: '#E76F51',
+                        sand: '#F8F5F0',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-sand text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4 top-0 bg-transparent text-white" id="navbar">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="text-2xl font-serif font-bold flex items-center gap-2 z-50 relative">
+                <i data-lucide="footprint" class="text-primary fill-current"></i> <span class="text-white">Harrysa</span><span class="text-primary">Tours</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="nav-link text-white hover:text-primary transition-colors font-medium">Home</a>
+                <a href="tours.html" class="nav-link text-white hover:text-primary transition-colors font-medium">Tours</a>
+                <a href="destinations.html" class="nav-link text-white hover:text-primary transition-colors font-medium">Destinations</a>
+                <a href="contact.html" class="px-6 py-2 bg-primary text-white rounded-full hover:bg-white hover:text-secondary transition-all transform hover:scale-105 shadow-lg">Contact Us</a>
+                
+                <button id="theme-toggle" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">
+                    <i data-lucide="moon" class="dark:hidden w-5 h-5"></i>
+                    <i data-lucide="sun" class="hidden dark:block w-5 h-5"></i>
+                </button>
+            </div>
+            
+             <!-- Mobile Menu Button -->
+             <button id="mobile-menu-btn" class="md:hidden z-50 text-white text-2xl focus:outline-none">
+                <i data-lucide="menu" class="menu-open-icon"></i>
+                <i data-lucide="x" class="menu-close-icon hidden"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden backdrop-blur-sm"></div>
+        
+        <!-- Mobile Menu Sidebar -->
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white dark:bg-gray-800 z-40 transform translate-x-full transition-transform duration-300 shadow-2xl flex flex-col pt-24 px-8 md:hidden">
+            <a href="index.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary text-gray-800 dark:text-gray-100">Home</a>
+            <a href="tours.html" class="text-lg font-medium py-4 border-b border-gray-100 dark:border-gray-700 hover:text-primary text-gray-800 dark:text-gray-100">Tours</a>
+            <a href="contact.html" class="mt-8 px-6 py-3 bg-primary text-white rounded-full text-center font-medium shadow-lg">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[60vh] min-h-[400px] flex items-end pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80" alt="Maasai Mara" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <a href="tours.html" class="inline-flex items-center gap-2 text-primary hover:text-white mb-6 transition-colors font-medium">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Tours
+            </a>
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-4">Maasai Mara Migration Safari</h1>
+            <div class="flex flex-wrap gap-6 text-gray-200">
+                <span class="flex items-center gap-2"><i data-lucide="clock" class="w-5 h-5 text-primary"></i> 3 Days / 2 Nights</span>
+                <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-5 h-5 text-primary"></i> Kenya</span>
+                <span class="flex items-center gap-2"><i data-lucide="users" class="w-5 h-5 text-primary"></i> Small Group</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12">
+                
+                <!-- Left Content -->
+                <div class="lg:w-2/3 space-y-12">
+                    
+                    <!-- Overview -->
+                    <div class="fade-in-up">
+                        <h2 class="text-2xl font-serif font-bold text-secondary dark:text-white mb-6">Experience the Wild</h2>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-6">
+                            Witness the world-famous Great Wildebeest Migration in the Maasai Mara. This 3-day safari offers exceptional game viewing opportunities including the Big Five (Lion, Leopard, Elephant, Buffalo, Rhino). You'll stay in premium lodges located right in the heart of the action, enjoying morning and evening game drives guided by our expert trackers.
+                        </p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                            <div class="bg-white dark:bg-gray-800 p-4 rounded-xl text-center shadow-sm">
+                                <i data-lucide="camera" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                                <span class="text-sm font-bold block text-gray-700 dark:text-gray-200">Photography</span>
+                            </div>
+                            <div class="bg-white dark:bg-gray-800 p-4 rounded-xl text-center shadow-sm">
+                                <i data-lucide="coffee" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                                <span class="text-sm font-bold block text-gray-700 dark:text-gray-200">All Meals</span>
+                            </div>
+                            <div class="bg-white dark:bg-gray-800 p-4 rounded-xl text-center shadow-sm">
+                                <i data-lucide="car" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                                <span class="text-sm font-bold block text-gray-700 dark:text-gray-200">4x4 Cruiser</span>
+                            </div>
+                            <div class="bg-white dark:bg-gray-800 p-4 rounded-xl text-center shadow-sm">
+                                <i data-lucide="bed-double" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                                <span class="text-sm font-bold block text-gray-700 dark:text-gray-200">Luxury Stay</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Itinerary -->
+                    <div class="fade-in-up">
+                        <h2 class="text-2xl font-serif font-bold text-secondary dark:text-white mb-6">Itinerary</h2>
+                        <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 before:h-full before:w-0.5 before:bg-primary/30">
+                            
+                            <!-- Day 1 -->
+                            <div class="relative pl-12">
+                                <div class="absolute left-0 top-1 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg z-10">1</div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Nairobi to Maasai Mara</h3>
+                                <p class="text-gray-600 dark:text-gray-400">Depart Nairobi early morning. Enjoy a scenic drive through the Great Rift Valley. Arrive at Maasai Mara in time for lunch. Afternoon game drive in search of the Big Five.</p>
+                            </div>
+
+                            <!-- Day 2 -->
+                            <div class="relative pl-12">
+                                <div class="absolute left-0 top-1 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg z-10">2</div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Full Day Game Drive</h3>
+                                <p class="text-gray-600 dark:text-gray-400">Spend the entire day exploring the vast plains. Enjoy a picnic lunch by the Mara River, watching hippos and crocodiles. Optional visit to a Maasai Village in the evening.</p>
+                            </div>
+
+                             <!-- Day 3 -->
+                             <div class="relative pl-12">
+                                <div class="absolute left-0 top-1 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg z-10">3</div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Morning Drive & Return</h3>
+                                <p class="text-gray-600 dark:text-gray-400">Early morning game drive to catch predators on the prowl. Breakfast at the lodge, then depart for Nairobi, arriving in the late afternoon.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery -->
+                    <div class="fade-in-up">
+                        <h2 class="text-2xl font-serif font-bold text-secondary dark:text-white mb-6">Gallery</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="rounded-xl w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                             <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="rounded-xl w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                              <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="rounded-xl w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sticky Booking Sidebar -->
+                <div class="lg:w-1/3">
+                    <div class="sticky top-28 fade-in-up">
+                        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-gray-700">
+                            <div class="text-center mb-6 border-b border-gray-100 dark:border-gray-700 pb-6">
+                                <span class="text-gray-500 text-sm">Starting form</span>
+                                <div class="text-4xl font-bold text-primary mt-1">$450</div>
+                                <span class="text-sm text-gray-500">per person</span>
+                            </div>
+                            
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+                                    <i data-lucide="check" class="text-green-500 w-5 h-5"></i>
+                                    <span>Park Fees Included</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+                                    <i data-lucide="check" class="text-green-500 w-5 h-5"></i>
+                                    <span>Full Board Meals</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+                                    <i data-lucide="check" class="text-green-500 w-5 h-5"></i>
+                                    <span>Expert Guide</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+                                    <i data-lucide="check" class="text-green-500 w-5 h-5"></i>
+                                    <span>Transport included</span>
+                                </div>
+                            </div>
+
+                            <a href="booking.html?tour=maasai-mara" class="block w-full bg-secondary text-white font-bold py-4 rounded-full shadow-lg hover:bg-primary transition-all transform hover:scale-[1.02] text-center mb-4">
+                                Book This Safari
+                            </a>
+                            
+                            <a href="contact.html" class="block w-full border-2 border-primary text-primary font-bold py-3 rounded-full hover:bg-primary hover:text-white transition-all text-center">
+                                Enquire Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2026 Harrysa Safari Tours. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- AI Assistant -->
+    <button id="ai-assistant-btn" class="ai-assistant-btn text-white z-50 transform hover:scale-110 transition-transform">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </button>
+    
+    <div id="chat-panel" class="chat-panel">
+        <div class="chat-header">
+            <div class="flex items-center gap-2">
+                <i data-lucide="bot" class="w-6 h-6"></i>
+                <span class="font-bold">Safari Guide AI</span>
+            </div>
+            <button id="close-chat" class="hover:bg-white/10 p-1 rounded transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+             <div class="chat-message ai">
+                Hello! I'm your Safari Assistant. Anything you'd like to know about this tour?
+            </div>
+            <div class="chat-options">
+                 <button class="chat-option-btn" data-question="best-safari">Is this tour good for kids?</button>
+                <button class="chat-option-btn" data-question="booking">How do I book?</button>
+            </div>
+        </div>
+        <div class="p-3 bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700">
+             <div class="flex gap-2">
+                <input type="text" placeholder="Type a message..." class="flex-1 px-4 py-2 rounded-full border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary text-sm" disabled>
+                <button class="w-9 h-9 bg-primary text-white rounded-full flex items-center justify-center disabled:opacity-50" disabled>
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

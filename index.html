@@ -17,7 +17,7 @@
                         primary: '#C19A6B',
                         secondary: '#1B4332',
                         accent: '#E76F51',
-                        sand: '#F9F7F2',
+                        sand: '#F8F5F0',
                     },
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-sand text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
 
@@ -40,30 +40,30 @@
     <nav class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent" id="navbar">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <!-- Logo -->
-            <a href="index.html" class="text-2xl font-serif font-bold text-white flex items-center gap-2 z-50 relative">
-                <i class="fas fa-paw text-primary"></i> <span class="text-secondary dark:text-white">Harrysa</span><span class="text-primary">Tours</span>
+            <a href="index.html" class="text-2xl font-serif font-bold text-secondary dark:text-white flex items-center gap-2 z-50 relative">
+                <i data-lucide="footprint" class="text-primary fill-current"></i> <span class="text-secondary dark:text-white">Harrysa</span><span class="text-primary">Tours</span>
             </a>
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8">
-                <a href="index.html" class="text-white hover:text-primary transition-colors font-medium">Home</a>
-                <a href="tours.html" class="text-white hover:text-primary transition-colors font-medium">Tours</a>
-                <a href="destinations.html" class="text-white hover:text-primary transition-colors font-medium">Destinations</a>
-                <a href="about.html" class="text-white hover:text-primary transition-colors font-medium">About</a>
-                <a href="blog.html" class="text-white hover:text-primary transition-colors font-medium">Blog</a>
+                <a href="index.html" class="nav-link text-secondary dark:text-white hover:text-primary transition-colors font-medium">Home</a>
+                <a href="tours.html" class="nav-link text-secondary dark:text-white hover:text-primary transition-colors font-medium">Tours</a>
+                <a href="destinations.html" class="nav-link text-secondary dark:text-white hover:text-primary transition-colors font-medium">Destinations</a>
+                <a href="about.html" class="nav-link text-secondary dark:text-white hover:text-primary transition-colors font-medium">About</a>
+                <a href="blog.html" class="nav-link text-secondary dark:text-white hover:text-primary transition-colors font-medium">Blog</a>
                 <a href="contact.html" class="px-6 py-2 bg-primary text-white rounded-full hover:bg-secondary transition-all transform hover:scale-105 shadow-lg">Contact Us</a>
                 
                 <!-- Dark Mode Toggle -->
-                <button id="theme-toggle" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">
-                    <i class="fas fa-moon dark:hidden"></i>
-                    <i class="fas fa-sun hidden dark:block"></i>
+                <button id="theme-toggle" class="p-2 rounded-full bg-secondary/10 dark:bg-white/10 hover:bg-secondary/20 dark:hover:bg-white/20 text-secondary dark:text-white transition-colors">
+                    <i data-lucide="moon" class="dark:hidden w-5 h-5"></i>
+                    <i data-lucide="sun" class="hidden dark:block w-5 h-5"></i>
                 </button>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden z-50 text-white text-2xl focus:outline-none">
-                <i class="fas fa-bars menu-open-icon"></i>
-                <i class="fas fa-times menu-close-icon hidden"></i>
+            <button id="mobile-menu-btn" class="md:hidden z-50 text-secondary dark:text-white text-2xl focus:outline-none">
+                <i data-lucide="menu" class="menu-open-icon"></i>
+                <i data-lucide="x" class="menu-close-icon hidden"></i>
             </button>
         </div>
 
@@ -112,7 +112,7 @@
 
         <!-- Scroll Indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white">
-            <i class="fas fa-chevron-down text-2xl"></i>
+            <i data-lucide="chevron-down" class="w-8 h-8"></i>
         </div>
     </header>
 
@@ -130,15 +130,19 @@
                 <div class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 fade-in-up">
                     <div class="relative h-64 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Maasai Mara" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-secondary dark:text-primary shadow-sm">
-                            <i class="fas fa-clock mr-1"></i> 3 Days
+                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-secondary dark:text-primary shadow-sm flex items-center gap-1">
+                            <i data-lucide="clock" class="w-4 h-4"></i> 3 Days
                         </div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-bold font-serif text-gray-900 dark:text-white group-hover:text-primary transition-colors">Maasai Mara Safari</h3>
                             <div class="flex text-yellow-500 text-sm">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">Experience the Great Migration and the Big 5 in Kenya's most famous reserve.</p>
@@ -147,8 +151,8 @@
                                 <span class="text-sm text-gray-500 dark:text-gray-400">From</span>
                                 <span class="text-2xl font-bold text-primary block">$450</span>
                             </div>
-                            <a href="tours.html" class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-primary transition-colors">
-                                <i class="fas fa-arrow-right"></i>
+                            <a href="tour-details.html" class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
                             </a>
                         </div>
                     </div>
@@ -158,15 +162,19 @@
                 <div class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 fade-in-up" style="animation-delay: 0.1s;">
                     <div class="relative h-64 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Amboseli" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-secondary dark:text-primary shadow-sm">
-                            <i class="fas fa-clock mr-1"></i> 2 Days
+                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-secondary dark:text-primary shadow-sm flex items-center gap-1">
+                            <i data-lucide="clock" class="w-4 h-4"></i> 2 Days
                         </div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-bold font-serif text-gray-900 dark:text-white group-hover:text-primary transition-colors">Amboseli Adventure</h3>
                             <div class="flex text-yellow-500 text-sm">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star-half" class="w-4 h-4 fill-current"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">Witness immense elephant herds against the backdrop of Mount Kilimanjaro.</p>
@@ -175,8 +183,8 @@
                                 <span class="text-sm text-gray-500 dark:text-gray-400">From</span>
                                 <span class="text-2xl font-bold text-primary block">$320</span>
                             </div>
-                            <a href="tours.html" class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-primary transition-colors">
-                                <i class="fas fa-arrow-right"></i>
+                            <a href="tour-details.html" class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
                             </a>
                         </div>
                     </div>
@@ -186,15 +194,19 @@
                 <div class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 fade-in-up" style="animation-delay: 0.2s;">
                     <div class="relative h-64 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tsavo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-secondary dark:text-primary shadow-sm">
-                            <i class="fas fa-clock mr-1"></i> 4 Days
+                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-secondary dark:text-primary shadow-sm flex items-center gap-1">
+                            <i data-lucide="clock" class="w-4 h-4"></i> 4 Days
                         </div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-bold font-serif text-gray-900 dark:text-white group-hover:text-primary transition-colors">Tsavo Wilderness</h3>
                             <div class="flex text-yellow-500 text-sm">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">Explore the vast red landscapes and man-eater lions of Tsavo National Park.</p>
@@ -203,8 +215,8 @@
                                 <span class="text-sm text-gray-500 dark:text-gray-400">From</span>
                                 <span class="text-2xl font-bold text-primary block">$550</span>
                             </div>
-                            <a href="tours.html" class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-primary transition-colors">
-                                <i class="fas fa-arrow-right"></i>
+                            <a href="tour-details.html" class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
                             </a>
                         </div>
                     </div>
@@ -213,7 +225,7 @@
 
             <div class="text-center mt-12 fade-in-up">
                 <a href="tours.html" class="inline-flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors text-lg">
-                    View All Tours <i class="fas fa-arrow-right"></i>
+                    View All Tours <i data-lucide="arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -233,7 +245,7 @@
                     <div class="space-y-6">
                         <div class="flex gap-4">
                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                                <i class="fas fa-certificate text-primary text-xl"></i>
+                                <i data-lucide="award" class="text-primary text-xl"></i>
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Expert Guides</h4>
@@ -242,7 +254,7 @@
                         </div>
                         <div class="flex gap-4">
                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                                <i class="fas fa-shield-alt text-primary text-xl"></i>
+                                <i data-lucide="shield" class="text-primary text-xl"></i>
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Safety First</h4>
@@ -251,7 +263,7 @@
                         </div>
                         <div class="flex gap-4">
                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                                <i class="fas fa-headset text-primary text-xl"></i>
+                                <i data-lucide="headphones" class="text-primary text-xl"></i>
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">24/7 Support</h4>
@@ -309,7 +321,7 @@
 
                 <!-- Destination 4 -->
                 <a href="destinations.html" class="group relative overflow-hidden rounded-2xl h-80 destination-card shadow-lg fade-in-up">
-                    <img src="https://images.unsplash.com/photo-1634547432607-2856f6636746?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Samburu" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1549488815-54e7d483b860?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Samburu" class="w-full h-full object-cover">
                     <div class="absolute inset-0 overlay flex flex-col justify-end p-6">
                         <h3 class="text-2xl font-serif font-bold text-white mb-1 group-hover:text-primary transition-colors">Samburu</h3>
                         <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Unique wildlife of northern Kenya</p>
@@ -318,7 +330,7 @@
 
                 <!-- Destination 5 -->
                 <a href="destinations.html" class="group relative overflow-hidden rounded-2xl h-80 destination-card shadow-lg fade-in-up" style="animation-delay: 0.1s;">
-                    <img src="https://images.unsplash.com/photo-1605649487215-2f5f7253457a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lake Nakuru" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1550953259-7b7074744473?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lake Nakuru" class="w-full h-full object-cover">
                     <div class="absolute inset-0 overlay flex flex-col justify-end p-6">
                         <h3 class="text-2xl font-serif font-bold text-white mb-1 group-hover:text-primary transition-colors">Lake Nakuru</h3>
                         <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Flamingos and rhinos sanctuary</p>
@@ -350,7 +362,7 @@
                     Get in Touch
                 </a>
                 <a href="https://wa.me/254700000000" target="_blank" class="px-8 py-4 bg-[#25D366] text-white rounded-full font-bold text-lg hover:bg-white hover:text-[#25D366] transition-all transform hover:scale-105 shadow-xl flex items-center gap-2">
-                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    <i data-lucide="message-circle" class="fill-current"></i> Chat on WhatsApp
                 </a>
             </div>
         </div>
@@ -363,13 +375,13 @@
                 <!-- Brand -->
                 <div>
                     <a href="index.html" class="text-2xl font-serif font-bold text-white flex items-center gap-2 mb-6">
-                        <i class="fas fa-paw text-primary"></i> <span>Harrysa</span><span class="text-primary">Tours</span>
+                        <i data-lucide="footprint" class="text-primary fill-current"></i> <span>Harrysa</span><span class="text-primary">Tours</span>
                     </a>
                     <p class="mb-6 text-sm leading-relaxed">Experience the best of Africa with our premium tours. We create memories that last a lifetime.</p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
                     </div>
                 </div>
 
@@ -402,15 +414,15 @@
                     <h3 class="text-white font-serif font-bold text-lg mb-6">Contact Info</h3>
                     <ul class="space-y-4 text-sm">
                         <li class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <i data-lucide="map-pin" class="text-primary mt-1 w-5 h-5"></i>
                             <span>Nairobi, Kenya</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="fas fa-phone text-primary"></i>
+                            <i data-lucide="phone" class="text-primary w-5 h-5"></i>
                             <span>+254 700 000 000</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="fas fa-envelope text-primary"></i>
+                            <i data-lucide="mail" class="text-primary w-5 h-5"></i>
                             <span>info@harrysatours.com</span>
                         </li>
                     </ul>
@@ -428,9 +440,47 @@
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-secondary hover:-translate-y-1 z-50">
-        <i class="fas fa-arrow-up"></i>
+    <button id="scroll-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-secondary hover:-translate-y-1 z-40">
+        <i data-lucide="arrow-up"></i>
     </button>
+                    
+    <!-- AI Assistant -->
+    <button id="ai-assistant-btn" class="ai-assistant-btn text-white z-50 transform hover:scale-110 transition-transform">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </button>
+
+    <div id="chat-panel" class="chat-panel">
+        <div class="chat-header">
+            <div class="flex items-center gap-2">
+                <i data-lucide="bot" class="w-6 h-6"></i>
+                <span class="font-bold">Safari Guide AI</span>
+            </div>
+            <button id="close-chat" class="hover:bg-white/10 p-1 rounded transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will be added here -->
+            <div class="chat-message ai">
+                Hello! I'm your Safari Assistant. How can I help you plan your dream trip today?
+            </div>
+            <div class="chat-options">
+                <button class="chat-option-btn" data-question="best-safari">Which safari is best for me?</button>
+                <button class="chat-option-btn" data-question="budget">Show me budget options</button>
+                <button class="chat-option-btn" data-question="luxury">Luxury safaris</button>
+                <button class="chat-option-btn" data-question="family">Family-friendly tours</button>
+                <button class="chat-option-btn" data-question="booking">How does booking work?</button>
+            </div>
+        </div>
+        <div class="p-3 bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700">
+            <div class="flex gap-2">
+                <input type="text" placeholder="Type a message..." class="flex-1 px-4 py-2 rounded-full border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary text-sm" disabled>
+                <button class="w-9 h-9 bg-primary text-white rounded-full flex items-center justify-center disabled:opacity-50" disabled>
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Scripts -->
     <script src="assets/js/main.js"></script>
